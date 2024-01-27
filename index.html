@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <title>Torunlar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            font-size: 16px;
+        }
+        
+        .w3-half img {
+            margin-bottom: -6px;
+            margin-top: 16px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        
+        .w3-half img:hover {
+            opacity: 1;
+        }
+        
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:12px">Menü'yü kapat</a>
+        <div class="w3-container">
+            <!-- Add your logo here with rounded corners -->
+            <img src="images/torunlar_logo.jpeg" alt="Torunlar" style="width: 100px; height: 100px;border-radius: 10%;">
+
+            <h3 style=" padding-bottom: 20px;"><b>Torunlar</b></h3>
+            <!-- Adjust the padding value as needed -->
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ana Sayfa</a>
+            <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Projelerimiz</a>
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hizmetler</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">İletişim</a>
+        </div>
+    </nav>
+
+    <!-- Küçük ekranlarda üst menü -->
+    <header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+        <img src="images/torunlar_logo.jpeg" alt="Torunlar" style="width: 40px; height: 40px;border-radius: 10%;">
+
+        <span>Torunlar</span>
+    </header>
+
+    <!-- Küçük ekranlarda sidebar açıldığında üstü örtme efekti -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="menüyü kapat" id="myOverlay"></div>
+
+    <!-- Sayfa içeriği -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Başlık -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>İç-Dış Mekan Tasarımı</b></h1>
+            <h1 class="w3-xxxlarge w3-text-blue"><b>Projelerimiz.</b></h1>
+            <hr style="width:50px;border:5px solid blue " class="w3-round">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm mb-6">
+                    <div id="carouselContainer1"></div>
+                </div>
+                <div class="col-sm mb-4">
+                    <div id="carouselContainer2"></div>
+                </div>
+                <div class="col-sm mb-4">
+                    <div id="carouselContainer3"></div>
+                </div>
+                <div class="col-sm mb-4">
+                    <div id="carouselContainer4"></div>
+                </div>
+                <div class="col-sm mb-4">
+                    <div id="carouselContainer5"></div>
+                </div>
+                <div class="col-sm mb-4">
+                    <div id="carouselContainer6"></div>
+                </div>
+                <div class="col-sm mb-4">
+                    <div id="carouselContainer7"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Hizmetler -->
+        <div class="w3-container" id="services" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-blue"><b>Hizmetler.</b></h1>
+            <hr style="width:50px;border:5px solid blue" class="w3-round">
+            <p>Ev ve sizin için en iyi olanına odaklanan bir iç mekan tasarım hizmetiyiz!</p>
+            <p>Hizmetlerimiz hakkında bazı metinler - Ne yaptığımız ve ne sunduğumuz. Biz lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+
+        <!-- İletişim -->
+        <div class="w3-container" id="contact" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-blue"><b>İletişim.</b></h1>
+            <hr style="width:50px;border:5px solid blue" class="w3-round">
+            <p>Siz de evinizi tasarlamamızı ister misiniz? Formu doldurun ve bize ayrıntıları bildirin :) Yeni insanlarla tanışmayı seviyoruz!</p>
+            <form action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Adınız</label>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>E-posta</label>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Mesajınız</label>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <button type="submit" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">Mesaj
+                    Gönder</button>
+            </form>
+
+
+        </div>
+
+
+        <!-- Sayfa içeriğini kapat -->
+    </div>
+
+
+
+    < <script>
+        function w3_open() { document.getElementById("mySidebar").style.display = "block"; document.getElementById("myOverlay").style.display = "block"; } function w3_close() { document.getElementById("mySidebar").style.display = "none"; document.getElementById("myOverlay").style.display
+        = "none"; } function onClick(element) { document.getElementById("img01").src = element.src; document.getElementById("modal01").style.display = "block"; var captionText = document.getElementById("caption"); captionText.innerHTML = element.alt;
+        }
+        </script>
+
+
+        <script>
+            function openModal(containerId) {
+                var modalId = containerId + "-modal";
+                $("#" + modalId).modal("show");
+            }
+        </script>
+
+        <script>
+            function generateCarousel(containerId, images) {
+                var carouselId = containerId + "-carousel";
+                var modalId = containerId + "-modal";
+
+                var carouselHtml = `
+            <div id="${containerId}">
+                <div id="${carouselId}" class="carousel slide" data-ride="carousel">
+                    `;
+
+                carouselHtml += `
+                    <div class="image-container">
+                        <p>Başlık Buraya</p>
+                        <img src="${images[0]}" alt="Resim 1" width="400" height="200" onclick="openModal('${containerId}')">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="modal-overlay"></div>
+                    <div class="modal fade" id="${modalId}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" style="margin: 0 auto; top: 50%; transform: translateY(-50%);">
+                            <div class="modal-content" style="background-color: rgba(0, 0, 0, 0);border: none;">
+                                <div class="modal-body">
+                                    <div id="${carouselId}" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">`;
+
+                for (var i = 0; i < images.length; i++) {
+                    carouselHtml += `
+                    <div class="carousel-item${i === 0 ? ' active' : ''}">
+                        <img src="${images[i]}" alt="Resim ${i + 1}" style="width:100%;">
+                    </div>`;
+                }
+
+                carouselHtml += `
+                </div>
+                <a class="carousel-control-prev" href="#${carouselId}" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#${carouselId}" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>`;
+
+                return carouselHtml;
+
+            }
+            var basketballImages = ["/images/basketball.JPEG", "/images/basketball2.JPEG"];
+            var bigPoolImages = ["/images/big_pool.JPEG", "/images/big_pool2.JPEG", "/images/big_pool3.JPEG"];
+            var constructionImages = ["/images/constraction.JPEG", "/images/constraction2.JPEG",
+                "/images/constraction3.JPEG", "/images/constraction4.JPEG"
+            ];
+            var fenerbahceImages = ["/images/fenerbahce_day.JPEG", "/images/fenerbahce_night.JPEG"];
+            var poolImages = ["/images/pool.JPEG", "/images/pool2.JPEG"];
+            var roomImages = ["/images/room_finished.JPEG",
+                "/images/room_finished2.JPEG", "/images/room_unfinished.JPEG"
+            ];
+            var stadiumImages = ["/images/stadium.png", "/images/stadium2.JPEG"];
+            document.getElementById("carouselContainer1").innerHTML = generateCarousel("carouselContainer1", basketballImages);
+            document.getElementById("carouselContainer2").innerHTML = generateCarousel("carouselContainer2", bigPoolImages);
+            document.getElementById("carouselContainer3").innerHTML = generateCarousel("carouselContainer3", constructionImages);
+            document.getElementById("carouselContainer4").innerHTML = generateCarousel("carouselContainer4", fenerbahceImages);
+            document.getElementById("carouselContainer5").innerHTML = generateCarousel("carouselContainer5", poolImages);
+            document.getElementById("carouselContainer6").innerHTML = generateCarousel("carouselContainer6",
+                roomImages);
+            document.getElementById("carouselContainer7").innerHTML = generateCarousel("carouselContainer7", stadiumImages);
+        </script>
+</body>
+<div class="w3-main" style="margin-left:300px;">
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-section">
+                    <h4>İletişim Bilgileri:</h4>
+                    <p>TATLISU MAH. TEZCAN CAD. KARACAN APT. No:58 1ç Kapi No:1</p>
+                    <p>ÜMRANIYE/ İSTANBUL</p>
+                    <p>Tel: 216 594 5433</p>
+                    <p>Fax: 216 594 5432</p>
+                    <p>E-Posta: <a href="mailto:muhasebe@torunlargrup.com.tr">muhasebe@torunlargrup.com.tr</a></p>
+                </div>
+                <div class="divider"></div>
+                <div class="footer-section">
+                    <h4>Şirket Bilgileri:</h4>
+                    <p>Vergi Dairesi: ALEMDAĞ</p>
+                    <p>VKN: 8570547602</p>
+                    <p>Ticaret Sicil: 174636-5</p>
+                    <p>MERSIS: 0857054760200001</p>
+                    <p>Şirket Merkezi: İSTANBUL</p>
+                </div>
+            </div>
+            <span class="text-muted">&copy; 2024 TORUNLAR GRUP YAPI SAN.TIC.LTD.STI</span>
+        </div>
+    </footer>
+</div>
+
+</html>
