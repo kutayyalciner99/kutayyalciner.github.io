@@ -51,16 +51,6 @@
 
 /* styles.css */
 
-.footer-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-section {
-    flex: 1;
-}
-
 .divider {
     width: 2px;
     background-color: #ccc;

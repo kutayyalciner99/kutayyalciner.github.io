@@ -124,10 +124,10 @@
         <div class="w3-container" id="services" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-blue"><b>Hizmetler.</b></h1>
             <hr style="width:50px;border:5px solid blue" class="w3-round">
-            <p>Ev ve sizin için en iyi olanına odaklanan bir iç mekan tasarım hizmetiyiz!</p>
-            <p>Hizmetlerimiz hakkında bazı metinler - Ne yaptığımız ve ne sunduğumuz. Biz lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <p>Çeşitli Alanlarda Kaliteli Hizmetler</p>
+            <p>Torunlar, stadyum koltukları boyama, havuz yapımı, basket sahası yapımı ve daha birçok çeşitli hizmetle sektörün önde gelen bir sağlayıcısıdır. Müşterilerimize, uzman ekip ve son teknoloji ekipmanlarla yüksek kalitede hizmet sunmayı taahhüt
+                ediyoruz. Her proje için özel tasarım ve çözümler üreterek, müşterilerimizin ihtiyaçlarına en uygun ve memnuniyet garantili sonuçlar elde etmelerini sağlıyoruz. Torunlar olarak, hizmetlerimizde kalite, güvenilirlik ve profesyonellik anlayışımızla
+                sektörde öne çıkıyoruz.
             </p>
         </div>
 
@@ -135,7 +135,9 @@
         <div class="w3-container" id="contact" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-blue"><b>İletişim.</b></h1>
             <hr style="width:50px;border:5px solid blue" class="w3-round">
-            <p>Siz de evinizi tasarlamamızı ister misiniz? Formu doldurun ve bize ayrıntıları bildirin :) Yeni insanlarla tanışmayı seviyoruz!</p>
+            <p>Restorasyon ve Yapı Yenileme Projeleriyle İlgileniyor musunuz? <br> <br> Size daha yakından hizmet verebilmemiz için lütfen aşağıdaki iletişim formunu doldurun. Her türlü restorasyon ve yapı yenileme projelerinde uzman olan Torunlar Şirketi
+                olarak, mekanlarınızı eski ihtişamına kavuşturmak ve yeniden canlandırmak için buradayız. Size yardımcı olabileceğimizi düşündüğünüz projenizin ayrıntılarını bize iletmekten çekinmeyin. Yeni bir başlangıca adım atmak için sabırsızlıkla
+                bekliyoruz. Bizimle iletişime geçin ve projenizi hayata geçirmeye başlayın!</p>
             <form action="/action_page.php" target="_blank">
                 <div class="w3-section">
                     <label>Adınız</label>
@@ -177,7 +179,7 @@
         </script>
 
         <script>
-            function generateCarousel(containerId, images) {
+            function generateCarousel(containerId, images, title) {
                 var carouselId = containerId + "-carousel";
                 var modalId = containerId + "-modal";
 
@@ -188,7 +190,7 @@
 
                 carouselHtml += `
                     <div class="image-container">
-                        <p>Başlık Buraya</p>
+                        <p>${title}</p>
                         <img src="${images[0]}" alt="Resim 1" width="400" height="200" onclick="openModal('${containerId}')">
                         <div class="overlay"></div>
                     </div>
@@ -236,14 +238,14 @@
                 "kutayyalciner.github.io/images/room_finished2.JPEG", "kutayyalciner.github.io/images/room_unfinished.JPEG"
             ];
             var stadiumImages = ["kutayyalciner.github.io/images/stadium.png", "kutayyalciner.github.io/images/stadium2.JPEG"];
-            document.getElementById("carouselContainer1").innerHTML = generateCarousel("carouselContainer1", basketballImages);
-            document.getElementById("carouselContainer2").innerHTML = generateCarousel("carouselContainer2", bigPoolImages);
-            document.getElementById("carouselContainer3").innerHTML = generateCarousel("carouselContainer3", constructionImages);
-            document.getElementById("carouselContainer4").innerHTML = generateCarousel("carouselContainer4", fenerbahceImages);
-            document.getElementById("carouselContainer5").innerHTML = generateCarousel("carouselContainer5", poolImages);
+            document.getElementById("carouselContainer1").innerHTML = generateCarousel("carouselContainer1", basketballImages, "Basket Sahası");
+            document.getElementById("carouselContainer2").innerHTML = generateCarousel("carouselContainer2", bigPoolImages, "Havuz");
+            document.getElementById("carouselContainer3").innerHTML = generateCarousel("carouselContainer3", constructionImages, "Saha Çalışması");
+            document.getElementById("carouselContainer4").innerHTML = generateCarousel("carouselContainer4", fenerbahceImages, "Fenerbahçe Restorasyon");
+            document.getElementById("carouselContainer5").innerHTML = generateCarousel("carouselContainer5", poolImages, "Havuz");
             document.getElementById("carouselContainer6").innerHTML = generateCarousel("carouselContainer6",
-                roomImages);
-            document.getElementById("carouselContainer7").innerHTML = generateCarousel("carouselContainer7", stadiumImages);
+                roomImages, "Oda yenilmesi");
+            document.getElementById("carouselContainer7").innerHTML = generateCarousel("carouselContainer7", stadiumImages, "Stadyum Koltuk Restorasyonu");
         </script>
 </body>
 <div class="w3-main" style="margin-left:300px;">
@@ -259,14 +261,8 @@
                     <p>Fax: 216 594 5432</p>
                     <p>E-Posta: <a href="mailto:muhasebe@torunlargrup.com.tr">muhasebe@torunlargrup.com.tr</a></p>
                 </div>
-                <div class="divider"></div>
                 <div class="footer-section">
-                    <h4>Şirket Bilgileri:</h4>
-                    <p>Vergi Dairesi: ALEMDAĞ</p>
-                    <p>VKN: 8570547602</p>
-                    <p>Ticaret Sicil: 174636-5</p>
-                    <p>MERSIS: 0857054760200001</p>
-                    <p>Şirket Merkezi: İSTANBUL</p>
+
                 </div>
             </div>
             <span class="text-muted">&copy; 2024 TORUNLAR GRUP YAPI SAN.TIC.LTD.STI</span>
