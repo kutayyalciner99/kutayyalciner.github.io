@@ -44,10 +44,96 @@
     text-decoration: none;
 }
 
-.footer a:hover {
-    text-decoration: underline;
+.main-photo,
+.person-photo {
+    border-radius: 10px;
+    /* Yuvarlatılmış kenar */
+    max-width: 170px;
+    /* Maksimum genişlik ayarı */
+    height: 250px;
+    /* Genişliğe oranlı yükseklik */
+    margin: 10px;
+    /* Kenar boşluğu */
+    float: left;
+
+    object-fit: cover;
+    /* Resimleri yan yana yerleştirir */
 }
 
+.name {
+    font-size: 24px;
+    /* Set the font size to your desired value */
+    font-weight: bold;
+    /* Make the text bold */
+}
+
+.video-container {
+    width: 100%;
+    max-width: auto;
+    /* Remove the max-width to keep it centered */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    display: flex;
+    /* Use flexbox for centering vertically */
+    justify-content: center;
+    /* Center horizontally within the container */
+    align-items: center;
+    /* Center vertically within the container */
+    border-radius: 10px;
+    /* Add rounded corners to the container */
+    overflow: hidden;
+    /* Hide any overflowing content */
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.experience-year {
+    color: blue;
+    /* Set the text color to blue */
+    font-weight: bold;
+    /* Optionally make the text bold */
+}
+
+.w3-sidebar,
+.w3-bar-item {
+    background-color: #0033A0;
+    color: white;
+}
 
 /* styles.css */
 

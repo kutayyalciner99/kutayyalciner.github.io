@@ -2,7 +2,7 @@
 <html lang="tr">
 
 <head>
-    <title>Torunlar</title>
+    <title>Torunlar Grup Yapı</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,22 +22,22 @@
         h5 {
             font-family: "Poppins", sans-serif;
         }
-        
+
         body {
             font-size: 16px;
         }
-        
+
         .w3-half img {
             margin-bottom: -6px;
             margin-top: 16px;
             opacity: 0.8;
             cursor: pointer;
         }
-        
+
         .w3-half img:hover {
             opacity: 1;
         }
-        
+
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -55,19 +55,24 @@
 
 
     <!-- Sidebar/menu -->
-    <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:12px">Menü'yü kapat</a>
+    <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;background-color: #0033A0; color: white;" id="mySidebar">
+        <br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:12px">Menü'yü kapat</a>
         <div class="w3-container">
             <!-- Add your logo here with rounded corners -->
             <img src="images/torunlar_logo.jpeg" alt="Torunlar" style="width: 100px; height: 100px;border-radius: 10%;">
 
-            <h3 style=" padding-bottom: 20px;"><b>Torunlar</b></h3>
+            <h3 style=" padding-bottom: 20px;"><b>Torunlar Grup Yapı</b></h3>
             <!-- Adjust the padding value as needed -->
         </div>
         <div class="w3-bar-block">
             <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ana Sayfa</a>
             <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Projelerimiz</a>
             <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hizmetler</a>
+            <a href="#person" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Şirketimizin
+                Kurucusu</a>
             <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">İletişim</a>
         </div>
     </nav>
@@ -81,7 +86,8 @@
     </header>
 
     <!-- Küçük ekranlarda sidebar açıldığında üstü örtme efekti -->
-    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="menüyü kapat" id="myOverlay"></div>
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="menüyü kapat"
+        id="myOverlay"></div>
 
     <!-- Sayfa içeriği -->
     <div class="w3-main" style="margin-left:340px;margin-right:40px">
@@ -90,7 +96,7 @@
         <div class="w3-container" style="margin-top:80px" id="showcase">
             <h1 class="w3-jumbo"><b>İç-Dış Mekan Tasarımı</b></h1>
             <h1 class="w3-xxxlarge w3-text-blue"><b>Projelerimiz.</b></h1>
-            <hr style="width:50px;border:5px solid blue " class="w3-round">
+            <hr style="width:50px;border:5px solid yellow " class="w3-round">
         </div>
 
         <div class="container">
@@ -116,28 +122,138 @@
                 <div class="col-sm mb-4">
                     <div id="carouselContainer7"></div>
                 </div>
+                <div class="col-sm mb-4">
+                    <div id="carouselContainer8"></div>
+                </div>
             </div>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="/kutayyalciner.github.io/images/torunlargrup-2.png" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="/kutayyalciner.github.io/images/torunlargrup-3.png" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="/kutayyalciner.github.io/images/torunlargrup-4.png" alt="Image 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="/kutayyalciner.github.io/images/torunlargrup-5.png" alt="Image 4">
+            </div>
+            <div class="carousel-slide">
+                <img src="/kutayyalciner.github.io/images/torunlargrup-6.png" alt="Image 5">
+            </div>
+            <div class="carousel-slide">
+                <img src="/kutayyalciner.github.io/images/torunlargrup-7.png" alt="Image 6">
+            </div>
+            <div class="carousel-slide">
+                <img src="/kutayyalciner.github.io/images/torunlargrup-8.png" alt="Image 7">
+            </div>
+            <div class="carousel-slide">
+                <img src="/kutayyalciner.github.io/images/torunlargrup-9.png" alt="Image 8">
+            </div>
+            <!-- Add more image slides as needed -->
+
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
 
 
         <!-- Hizmetler -->
         <div class="w3-container" id="services" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-blue"><b>Hizmetler.</b></h1>
-            <hr style="width:50px;border:5px solid blue" class="w3-round">
-            <p>Çeşitli Alanlarda Kaliteli Hizmetler</p>
-            <p>Torunlar, stadyum koltukları boyama, havuz yapımı, basket sahası yapımı ve daha birçok çeşitli hizmetle sektörün önde gelen bir sağlayıcısıdır. Müşterilerimize, uzman ekip ve son teknoloji ekipmanlarla yüksek kalitede hizmet sunmayı taahhüt
-                ediyoruz. Her proje için özel tasarım ve çözümler üreterek, müşterilerimizin ihtiyaçlarına en uygun ve memnuniyet garantili sonuçlar elde etmelerini sağlıyoruz. Torunlar olarak, hizmetlerimizde kalite, güvenilirlik ve profesyonellik anlayışımızla
-                sektörde öne çıkıyoruz.
+            <hr style="width:50px;border:5px solid yellow" class="w3-round">
+            <p>Geniş Hizmet Yelpazesi ve Üstün Kalite</p>
+            <p>Torunlar Yapı, sektörün önde gelen bir hizmet sağlayıcısı olarak, stadyum koltukları imalatı, boyama,
+                havuz yapımı, basket sahası yapımı, harfiyat işleri ve bilimum inşaat hizmetleri de dahil olmak üzere
+                birçok farklı alanda uzmanlaşmıştır. Müşterilerimize, uzman ekip ve son teknoloji ekipmanlarla yüksek
+                kalitede hizmet sunmayı taahhüt ediyoruz. Her projeyi özel tasarım ve çözümlerle ele alarak,
+                müşterilerimizin ihtiyaçlarına en uygun ve memnuniyet garantili sonuçlar elde etmelerini sağlıyoruz.
+                Torunlar Yapı olarak, hizmetlerimizde kalite, güvenilirlik ve profesyonellik anlayışımızla sektörde öne
+                çıkıyoruz.
             </p>
         </div>
+
+        <!-- Başkan -->
+        <div class="w3-container" id="person" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-blue"><b>Şirketimizin Kurucusu</b></h1>
+            <hr style="width:50px;border:5px solid yellow" class="w3-round">
+            <div class="cv-component">
+                <img src="/kutayyalciner.github.io/images/person.JPEG" alt="Zekeriya Ayva" class="person-photo">
+                <div class="photo"></div>
+                <div class="name">Zekeriya Ayva</div>
+                <br>
+
+                <div class="subtitle" style="color: #0033A0;">Şirket Sahibi ve Yönetici Direktör</div>
+                <br>
+                <div class="experience">
+                    <p>1970 KARS Kağızman'da doğmuştur 1987 yılında İstanbula gelmiş ve 2006 yılına kadar bir çok İnşaat
+                        firmalarında Usta Formen Kalfa görevlerinde çalışmıştır 29 yıllık iş hayatında edindiği
+                        tecrübeleri ile 2006 yılında Torunlar Grup Yapı San. Tic. Ltd. Sti. şirketini kurmuş ve hala
+                        şirketin yönetim kurulu
+                        başkanıdır evli ve 2 çocuk babasıdır</p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <br>
+        <div class="video-container">
+            <video controls>
+                <source src="/kutayyalciner.github.io/images/zekeriyabey.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+
+
 
         <!-- İletişim -->
         <div class="w3-container" id="contact" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-blue"><b>İletişim.</b></h1>
-            <hr style="width:50px;border:5px solid blue" class="w3-round">
-            <p>Restorasyon ve Yapı Yenileme Projeleriyle İlgileniyor musunuz? <br> <br> Size daha yakından hizmet verebilmemiz için lütfen aşağıdaki iletişim formunu doldurun. Her türlü restorasyon ve yapı yenileme projelerinde uzman olan Torunlar Şirketi
-                olarak, mekanlarınızı eski ihtişamına kavuşturmak ve yeniden canlandırmak için buradayız. Size yardımcı olabileceğimizi düşündüğünüz projenizin ayrıntılarını bize iletmekten çekinmeyin. Yeni bir başlangıca adım atmak için sabırsızlıkla
+            <hr style="width:50px;border:5px solid yellow" class="w3-round">
+            <p>Restorasyon ve Yapı Yenileme Projeleriyle İlgileniyor musunuz? <br> <br> Size daha yakından hizmet
+                verebilmemiz için lütfen aşağıdaki iletişim formunu doldurun. Her türlü restorasyon ve yapı yenileme
+                projelerinde uzman olan Torunlar Şirketi
+                olarak, mekanlarınızı eski ihtişamına kavuşturmak ve yeniden canlandırmak için buradayız. Size yardımcı
+                olabileceğimizi düşündüğünüz projenizin ayrıntılarını bize iletmekten çekinmeyin. Yeni bir başlangıca
+                adım atmak için sabırsızlıkla
                 bekliyoruz. Bizimle iletişime geçin ve projenizi hayata geçirmeye başlayın!</p>
+
+            <div class="row">
+                <!-- First card -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Nesrin Sümer - İnşaat Mühendisi</h5>
+                            <p class="card-text">
+                                <a href="tel:05323055474" style="text-decoration: underline; color: blue;">0532 305 54
+                                    74</a><br>
+                                Proje Müdürü
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second card -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ekrem Coşkun</h5>
+                            <p class="card-text">
+                                <a href="tel:05414741105" style="text-decoration: underline; color: blue;">0541 474 11
+                                    05</a><br>
+                                İdari İşler
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <form action="/action_page.php" target="_blank">
                 <div class="w3-section">
                     <label>Adınız</label>
@@ -164,9 +280,16 @@
 
 
 
+
+
+
     < <script>
-        function w3_open() { document.getElementById("mySidebar").style.display = "block"; document.getElementById("myOverlay").style.display = "block"; } function w3_close() { document.getElementById("mySidebar").style.display = "none"; document.getElementById("myOverlay").style.display
-        = "none"; } function onClick(element) { document.getElementById("img01").src = element.src; document.getElementById("modal01").style.display = "block"; var captionText = document.getElementById("caption"); captionText.innerHTML = element.alt;
+        function w3_open() { document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block"; } function w3_close() {
+        document.getElementById("mySidebar").style.display = "none"; document.getElementById("myOverlay").style.display
+        = "none"; } function onClick(element) { document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block"; var captionText =
+        document.getElementById("caption"); captionText.innerHTML = element.alt;
         }
         </script>
 
@@ -229,23 +352,51 @@
             }
             var basketballImages = ["kutayyalciner.github.io/images/basketball.JPEG", "kutayyalciner.github.io/images/basketball2.JPEG"];
             var bigPoolImages = ["kutayyalciner.github.io/images/big_pool.JPEG", "kutayyalciner.github.io/images/big_pool2.JPEG", "kutayyalciner.github.io/images/big_pool3.JPEG"];
-            var constructionImages = ["kutayyalciner.github.io/images/constraction.JPEG", "kutayyalciner.github.io/images/constraction2.JPEG",
+            var constructionImages = ["kutayyalciner.github.io/images/constraction_fb.JPEG", "kutayyalciner.github.io/images/constraction.JPEG", "kutayyalciner.github.io/images/constraction2.JPEG",
                 "kutayyalciner.github.io/images/constraction3.JPEG", "kutayyalciner.github.io/images/constraction4.JPEG"
             ];
             var fenerbahceImages = ["kutayyalciner.github.io/images/fenerbahce_day.JPEG", "kutayyalciner.github.io/images/fenerbahce_night.JPEG"];
-            var poolImages = ["kutayyalciner.github.io/images/pool.JPEG", "kutayyalciner.github.io/images/pool2.JPEG"];
+            var poolImages = ["kutayyalciner.github.io/images/pool2.JPEG"];
             var roomImages = [
-                "kutayyalciner.github.io/images/room_finished2.JPEG", "kutayyalciner.github.io/images/room_unfinished.JPEG"
+                "kutayyalciner.github.io/images/room_finished.JPEG"
             ];
             var stadiumImages = ["kutayyalciner.github.io/images/stadium.png", "kutayyalciner.github.io/images/stadium2.JPEG"];
-            document.getElementById("carouselContainer1").innerHTML = generateCarousel("carouselContainer1", basketballImages, "Basket Sahası");
-            document.getElementById("carouselContainer2").innerHTML = generateCarousel("carouselContainer2", bigPoolImages, "Havuz");
-            document.getElementById("carouselContainer3").innerHTML = generateCarousel("carouselContainer3", constructionImages, "Saha Çalışması");
-            document.getElementById("carouselContainer4").innerHTML = generateCarousel("carouselContainer4", fenerbahceImages, "Fenerbahçe Restorasyon");
-            document.getElementById("carouselContainer5").innerHTML = generateCarousel("carouselContainer5", poolImages, "Havuz");
+            var loungeImages = ["kutayyalciner.github.io/images/lounge.jpeg", "kutayyalciner.github.io/images/lounge2.jpeg"];
+            document.getElementById("carouselContainer1").innerHTML = generateCarousel("carouselContainer1", basketballImages, "Fenerbahçe Koleji - Kayışdağı");
+            document.getElementById("carouselContainer2").innerHTML = generateCarousel("carouselContainer2", bigPoolImages, "Fenerbahçe Yüzme havuzu Faruk Ilgaz sosyal tesisleri");
+            document.getElementById("carouselContainer3").innerHTML = generateCarousel("carouselContainer3", constructionImages, "Edirne Fenerbahçe evi Sosyal tesisleri");
+            document.getElementById("carouselContainer4").innerHTML = generateCarousel("carouselContainer4", fenerbahceImages, "Fenerbahçe Faruk Ilgaz Sosyal tesisleri");
+            document.getElementById("carouselContainer5").innerHTML = generateCarousel("carouselContainer5", poolImages, "Fenerbahçe Faruk Ilgaz Sosyal tesisleri üye havuzu");
             document.getElementById("carouselContainer6").innerHTML = generateCarousel("carouselContainer6",
-                roomImages, "Oda yenilmesi");
-            document.getElementById("carouselContainer7").innerHTML = generateCarousel("carouselContainer7", stadiumImages, "Stadyum Koltuk Restorasyonu");
+                roomImages, "Fenerbahçe sk Divan kurulu başkanlık makamı");
+            document.getElementById("carouselContainer7").innerHTML = generateCarousel("carouselContainer7", stadiumImages, "Şükrü Saraçoğlu Stadyum koltuk imalat ve bakımı");
+            document.getElementById("carouselContainer8").innerHTML = generateCarousel("carouselContainer8", loungeImages, "Şükrü Saraçoğlu Lounge Bölümü ");
+        </script>
+
+
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-slide');
+
+            function showSlide(n) {
+                slides[currentSlide].style.opacity = 0;
+                slides[currentSlide].style.display = 'none';
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].style.display = 'block';
+                setTimeout(() => {
+                    slides[currentSlide].style.opacity = 1;
+                }, 50); // Add a slight delay to ensure smooth transition
+            }
+
+            function changeSlide(n) {
+                showSlide(currentSlide + n);
+            }
+
+            setInterval(() => {
+                changeSlide(1);
+            }, 8000);
+
+            showSlide(currentSlide); // Show the initial slide.
         </script>
 </body>
 <div class="w3-main" style="margin-left:300px;">
@@ -256,12 +407,14 @@
                 <div class="footer-section">
                     <h4>İletişim Bilgileri:</h4>
                     <p>TATLISU MAH. TEZCAN CAD. KARACAN APT. No:58 1ç Kapi No:1</p>
-                    <p>ÜMRANIYE/ İSTANBUL</p>
-                    <p>Tel: 216 594 5433</p>
-                    <p>Fax: 216 594 5432</p>
-                    <p>E-Posta: <a href="mailto:muhasebe@torunlargrup.com.tr">muhasebe@torunlargrup.com.tr</a></p>
+                    <p>ÜMRANIYE / İSTANBUL</p>
+                    <p>Tel: 216 594 54 33</p>
+                    <p>Fax: 216 594 54 32</p>
+                    <p>E-Posta: <a href="mailto:info@torunlargrup.com.tr"
+                            style="text-decoration: underline; color: white;font-weight:bold;">info@torunlargrup.com.tr</a>
+                    </p>
                 </div>
-                <div class="footer-section">
+                <div class=" footer-section">
 
                 </div>
             </div>
